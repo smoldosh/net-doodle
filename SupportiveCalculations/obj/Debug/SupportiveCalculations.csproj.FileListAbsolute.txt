@@ -1,0 +1,5 @@
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\bin\Debug\SupportiveCalculations.dll
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\bin\Debug\SupportiveCalculations.pdb
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\obj\Debug\SupportiveCalculations.csprojResolveAssemblyReference.cache
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\obj\Debug\SupportiveCalculations.dll
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\obj\Debug\SupportiveCalculations.pdb

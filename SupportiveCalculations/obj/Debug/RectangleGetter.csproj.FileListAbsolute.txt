@@ -1,0 +1,5 @@
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\bin\Debug\RectangleGetter.dll
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\bin\Debug\RectangleGetter.pdb
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\obj\Debug\RectangleGetter.csprojResolveAssemblyReference.cache
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\obj\Debug\RectangleGetter.dll
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\SupportiveCalculations\obj\Debug\RectangleGetter.pdb
