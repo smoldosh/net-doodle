@@ -43,17 +43,17 @@ namespace PaintProg
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Intro));
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
 			this.button1 = new System.Windows.Forms.Button();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(12, 40);
+			this.pictureBox1.Location = new System.Drawing.Point(12, 43);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(119, 117);
+			this.pictureBox1.Size = new System.Drawing.Size(74, 76);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
@@ -68,19 +68,9 @@ namespace PaintProg
 			this.label1.Text = ".NET Doodle";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
-			// label2
-			// 
-			this.label2.Location = new System.Drawing.Point(138, 40);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(174, 117);
-			this.label2.TabIndex = 2;
-			this.label2.Text = "Programování\r\nJiří Smolík\r\n\r\nLogo štětce na úvodní obrazoce\r\nFreePik (staženo z f" +
-	"laticon.com)\r\n\r\nIkony na panelu nástrojů\r\n\"Ukradnuty\" z aplikace MS Paint";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(123, 163);
+			this.button1.Location = new System.Drawing.Point(102, 127);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 3;
@@ -88,15 +78,26 @@ namespace PaintProg
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
+			// label2
+			// 
+			this.label2.Location = new System.Drawing.Point(92, 43);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(189, 76);
+			this.label2.TabIndex = 2;
+			this.label2.Text = "Programování\r\nJiří Smolík (c) 2018\r\n\r\nGrafika vytvořena s využitím nástrojů Anim8" +
+	"or a MS Paint\r\n\r\n\r\n";
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// Intro
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(324, 197);
+			this.ClientSize = new System.Drawing.Size(280, 162);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBox1);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Name = "Intro";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Intro";

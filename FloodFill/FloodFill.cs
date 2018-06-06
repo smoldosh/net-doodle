@@ -14,19 +14,21 @@ using System.Windows.Forms;
 namespace FloodFill
 {
 	/// <summary>
-	/// Třída fungující jako "kyblík" v MS paint.
+	/// Allows to fill a selected area with 1 color. It is used to add "Fill bucket" functionality
+	/// to the drawing program(similiar to "Fill bucket" tool in MS Paint).
 	/// </summary>
 	public class Fill
 	{
 		/// <summary>
-		/// Vyplní oblast se stejnou barvou jinou barvou.
-		/// Algoritmus převzat z https://simpledevcode.wordpress.com/2015/12/29/flood-fill-algorithm-using-c-net/
+		/// Fils the selected area with a color.
+		/// The applied algorithm was taken from https://simpledevcode.wordpress.com/2015/12/29/flood-fill-algorithm-using-c-net/
+		/// where it is described in details.
 		/// </summary>
-		/// <param name="bmp">Bitmapa ve které dojde k vyplnění.</param>
-		/// <param name="pb">Picturebox, který se bude po vyplnění obnovovat.</param>
-		/// <param name="pt">Počáteční bod vyplňování.</param>
-		/// <param name="targetColor">Původní barva.</param>
-		/// <param name="replacementColor">"Nová barva.</param>
+		/// <param name="bmp">Bitmap where the area to fill is present..</param>
+		/// <param name="pb">Picturebox to be refreshed.</param>
+		/// <param name="pt">Initial point, i.e. where an user clicked.</param>
+		/// <param name="targetColor">Targeted color, i.e. the color that is to be replaced by other one.</param>
+		/// <param name="replacementColor">New color.</param>
 		public void FillRegion(Bitmap bmp, PictureBox pb, Point pt, Color targetColor, Color replacementColor)
 		{
 			Stack<Point> pixels = new Stack<Point>();

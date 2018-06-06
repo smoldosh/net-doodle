@@ -12,3 +12,6 @@ C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\PaintProg\bin\Debug\Fl
 C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\PaintProg\bin\Debug\RectangleGetter.dll
 C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\PaintProg\bin\Debug\RectangleGetter.pdb
 C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\PaintProg\obj\Debug\PaintProg.Intro.resources
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\PaintProg\bin\Debug\PaintProg.xml
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\PaintProg\bin\Debug\FloodFill.xml
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\PaintProg\bin\Debug\RectangleGetter.xml

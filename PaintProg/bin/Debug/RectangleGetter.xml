@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RectangleGetter</name>
+    </assembly>
+    <members>
+        <member name="T:RectangleGetter.RectGetter">
+            <summary>
+            Contains functions to return polygons and rectangles used in drawing
+            features of application.
+            </summary>
+        </member>
+        <member name="M:RectangleGetter.RectGetter.GetRectangle(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Creates a rectangle from 2 points.
+            </summary>
+            <param name="p1">1. point.</param>
+            <param name="p2">2. point.</param>
+            <returns>Rectangle</returns>
+        </member>
+        <member name="M:RectangleGetter.RectGetter.GetRectangularPolygon(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            Ze získaných bodů vytvoří obdélníkový polygon pro vykreslení.
+            </summary>
+            <param name="p1">1. point.</param>
+            <param name="p2">2. point.</param>
+            <returns>Polygon that represents a rectangle.</returns>
+        </member>
+    </members>
+</doc>

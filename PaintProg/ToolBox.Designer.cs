@@ -84,9 +84,9 @@ namespace PaintProg
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label1.Location = new System.Drawing.Point(13, 24);
+			this.label1.Location = new System.Drawing.Point(12, 44);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(290, 23);
+			this.label1.Size = new System.Drawing.Size(271, 23);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Nastavení";
 			this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -95,7 +95,7 @@ namespace PaintProg
 			// 
 			this.groupBox1.Controls.Add(this.hScrollBar1);
 			this.groupBox1.Controls.Add(this.label2);
-			this.groupBox1.Location = new System.Drawing.Point(42, 115);
+			this.groupBox1.Location = new System.Drawing.Point(12, 182);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(259, 76);
 			this.groupBox1.TabIndex = 1;
@@ -138,7 +138,7 @@ namespace PaintProg
 			// 
 			this.groupBox2.Controls.Add(this.button2);
 			this.groupBox2.Controls.Add(this.button1);
-			this.groupBox2.Location = new System.Drawing.Point(49, 50);
+			this.groupBox2.Location = new System.Drawing.Point(19, 117);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(123, 56);
 			this.groupBox2.TabIndex = 3;
@@ -160,9 +160,9 @@ namespace PaintProg
 			// penButton
 			// 
 			this.penButton.Image = ((System.Drawing.Image)(resources.GetObject("penButton.Image")));
-			this.penButton.Location = new System.Drawing.Point(13, 51);
+			this.penButton.Location = new System.Drawing.Point(12, 70);
 			this.penButton.Name = "penButton";
-			this.penButton.Size = new System.Drawing.Size(23, 23);
+			this.penButton.Size = new System.Drawing.Size(36, 36);
 			this.penButton.TabIndex = 4;
 			this.penButton.UseVisualStyleBackColor = true;
 			this.penButton.Click += new System.EventHandler(this.PenButtonClick);
@@ -170,9 +170,9 @@ namespace PaintProg
 			// FillButton
 			// 
 			this.FillButton.Image = ((System.Drawing.Image)(resources.GetObject("FillButton.Image")));
-			this.FillButton.Location = new System.Drawing.Point(13, 81);
+			this.FillButton.Location = new System.Drawing.Point(69, 70);
 			this.FillButton.Name = "FillButton";
-			this.FillButton.Size = new System.Drawing.Size(23, 23);
+			this.FillButton.Size = new System.Drawing.Size(36, 36);
 			this.FillButton.TabIndex = 5;
 			this.FillButton.UseVisualStyleBackColor = true;
 			this.FillButton.Click += new System.EventHandler(this.FillButtonClick);
@@ -180,9 +180,9 @@ namespace PaintProg
 			// RectButton
 			// 
 			this.RectButton.Image = ((System.Drawing.Image)(resources.GetObject("RectButton.Image")));
-			this.RectButton.Location = new System.Drawing.Point(12, 110);
+			this.RectButton.Location = new System.Drawing.Point(126, 70);
 			this.RectButton.Name = "RectButton";
-			this.RectButton.Size = new System.Drawing.Size(24, 23);
+			this.RectButton.Size = new System.Drawing.Size(36, 36);
 			this.RectButton.TabIndex = 6;
 			this.RectButton.UseVisualStyleBackColor = true;
 			this.RectButton.Click += new System.EventHandler(this.RectButtonClick);
@@ -190,9 +190,9 @@ namespace PaintProg
 			// EllipseButton
 			// 
 			this.EllipseButton.Image = ((System.Drawing.Image)(resources.GetObject("EllipseButton.Image")));
-			this.EllipseButton.Location = new System.Drawing.Point(13, 139);
+			this.EllipseButton.Location = new System.Drawing.Point(182, 70);
 			this.EllipseButton.Name = "EllipseButton";
-			this.EllipseButton.Size = new System.Drawing.Size(23, 23);
+			this.EllipseButton.Size = new System.Drawing.Size(36, 36);
 			this.EllipseButton.TabIndex = 7;
 			this.EllipseButton.UseVisualStyleBackColor = true;
 			this.EllipseButton.Click += new System.EventHandler(this.EllipseButtonClick);
@@ -200,9 +200,9 @@ namespace PaintProg
 			// sprayButton
 			// 
 			this.sprayButton.Image = ((System.Drawing.Image)(resources.GetObject("sprayButton.Image")));
-			this.sprayButton.Location = new System.Drawing.Point(13, 168);
+			this.sprayButton.Location = new System.Drawing.Point(235, 70);
 			this.sprayButton.Name = "sprayButton";
-			this.sprayButton.Size = new System.Drawing.Size(23, 23);
+			this.sprayButton.Size = new System.Drawing.Size(36, 36);
 			this.sprayButton.TabIndex = 8;
 			this.sprayButton.UseVisualStyleBackColor = true;
 			this.sprayButton.Click += new System.EventHandler(this.SprayButtonClick);
@@ -215,7 +215,7 @@ namespace PaintProg
 			this.ukončitToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(315, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(288, 24);
 			this.menuStrip1.TabIndex = 9;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -242,11 +242,12 @@ namespace PaintProg
 			// 
 			// statusStrip1
 			// 
+			this.statusStrip1.BackColor = System.Drawing.SystemColors.Control;
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.toolStripStatusLabel1});
-			this.statusStrip1.Location = new System.Drawing.Point(0, 204);
+			this.statusStrip1.Location = new System.Drawing.Point(0, 263);
 			this.statusStrip1.Name = "statusStrip1";
-			this.statusStrip1.Size = new System.Drawing.Size(315, 22);
+			this.statusStrip1.Size = new System.Drawing.Size(288, 22);
 			this.statusStrip1.TabIndex = 10;
 			this.statusStrip1.Text = "statusStrip1";
 			// 
@@ -258,7 +259,7 @@ namespace PaintProg
 			// 
 			// checkBox1
 			// 
-			this.checkBox1.Location = new System.Drawing.Point(178, 68);
+			this.checkBox1.Location = new System.Drawing.Point(148, 135);
 			this.checkBox1.Name = "checkBox1";
 			this.checkBox1.Size = new System.Drawing.Size(123, 24);
 			this.checkBox1.TabIndex = 11;
@@ -270,7 +271,7 @@ namespace PaintProg
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(315, 226);
+			this.ClientSize = new System.Drawing.Size(288, 285);
 			this.Controls.Add(this.checkBox1);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.sprayButton);
@@ -282,6 +283,8 @@ namespace PaintProg
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.menuStrip1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "ToolBox";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -297,7 +300,7 @@ namespace PaintProg
 			this.PerformLayout();
 
 		}
+		}
 
 	}
-}
 

@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PaintProg</name>
+    </assembly>
+    <members>
+        <member name="T:PaintProg.Intro">
+            <summary>
+            Shows an introductory pop-up.
+            </summary>
+        </member>
+        <member name="F:PaintProg.Intro.components">
+            <summary>
+            Designer variable used to keep track of non-visual components.
+            </summary>
+        </member>
+        <member name="M:PaintProg.Intro.Dispose(System.Boolean)">
+            <summary>
+            Disposes resources used by the form.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PaintProg.Intro.InitializeComponent">
+            <summary>
+            This method is required for Windows Forms designer support.
+            Do not change the method contents inside the source code editor. The Forms designer might
+            not be able to load this method if it was changed manually.
+            </summary>
+        </member>
+        <member name="T:PaintProg.MainForm">
+            <summary>
+            Main window of the application.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.rectGetter">
+            <summary>
+            Contains supportive calculations for getting data about drawn rectangles and ellipses.
+            This is a practical example of a custom .dll library.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.fl">
+            <summary>
+            Contains a function for coloring a single-color area with another color. 
+            This is a practical example of a custom .dll library.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.bmp">
+            <summary>
+            Represents a canvas on which user draws.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.pointsToDraw">
+            <summary>
+            Used for storing points to create a hand drawn line.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.isEditing">
+            <summary>
+            Used for storing "editing state" of a program, i.e. if user draws on canvas or not.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.rightPressed">
+            <summary>
+            Used for checking which mouse button is pressed.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.fillingShapes">
+            <summary>
+            Used for checking if an user wants to draw a filled shape or an outline of it.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.mX">
+            <summary>
+            Stores an X-coordinate of a mouse.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.mY">
+            <summary>
+            Stores an Y-coordinate of a mouse.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.selectedTool">
+            <summary>
+            Used to store a selected drawing tool.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.penWidth">
+            <summary>
+            A width of a pen.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.colors">
+            <summary>
+            Contains information about selected colors([0] - left; [1] - right);
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.helpPoint">
+            <summary>
+            Supportive point for drawing rectangles and ellipses.
+            </summary>
+        </member>
+        <member name="M:PaintProg.MainForm.ResizeBitmap">
+            <summary>
+            Changes the size of an canvas(and bitmap as well). The size is dependent on the sizes
+            of the entire canvas form.
+            </summary>
+        </member>
+        <member name="F:PaintProg.MainForm.components">
+            <summary>
+            Designer variable used to keep track of non-visual components.
+            </summary>
+        </member>
+        <member name="M:PaintProg.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Disposes resources used by the form.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PaintProg.MainForm.InitializeComponent">
+            <summary>
+            This method is required for Windows Forms designer support.
+            Do not change the method contents inside the source code editor. The Forms designer might
+            not be able to load this method if it was changed manually.
+            </summary>
+        </member>
+        <member name="T:PaintProg.MainForm.ActiveTool">
+            <summary>
+            Used as a switch for selecting desired drawing operation.
+            </summary>
+        </member>
+        <member name="T:PaintProg.Program">
+            <summary>
+            Class with program entry point.
+            </summary>
+        </member>
+        <member name="M:PaintProg.Program.Main(System.String[])">
+            <summary>
+            Program entry point.
+            </summary>
+        </member>
+        <member name="T:PaintProg.ToolBox">
+            <summary>
+            A form that allows user to select and setup drawing tools.
+            </summary>
+        </member>
+        <member name="F:PaintProg.ToolBox.components">
+            <summary>
+            Designer variable used to keep track of non-visual components.
+            </summary>
+        </member>
+        <member name="M:PaintProg.ToolBox.Dispose(System.Boolean)">
+            <summary>
+            Disposes resources used by the form.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:PaintProg.ToolBox.InitializeComponent">
+            <summary>
+            This method is required for Windows Forms designer support.
+            Do not change the method contents inside the source code editor. The Forms designer might
+            not be able to load this method if it was changed manually.
+            </summary>
+        </member>
+    </members>
+</doc>

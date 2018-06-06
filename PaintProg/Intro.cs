@@ -13,20 +13,13 @@ using System.Windows.Forms;
 namespace PaintProg
 {
 	/// <summary>
-	/// Description of Intro.
+	/// Shows an introductory pop-up.
 	/// </summary>
 	public partial class Intro : Form
 	{
 		public Intro()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
 		}
 		void Button1Click(object sender, EventArgs e)
 		{

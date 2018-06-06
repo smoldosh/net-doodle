@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace PaintProg
 {
 	/// <summary>
-	/// Formulář pro nastavení kreslení.
+	/// A form that allows user to select and setup drawing tools.
 	/// </summary>
 	public partial class ToolBox : Form
 	{
@@ -53,7 +53,6 @@ namespace PaintProg
 		void Button2Click(object sender, EventArgs e)
 		{
 			var colDial = new ColorDialog();
-			
 			if(colDial.ShowDialog() == DialogResult.OK)
 			{
 				button2.BackColor = colDial.Color;

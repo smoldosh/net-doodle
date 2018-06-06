@@ -17,87 +17,84 @@ using FloodFill;
 namespace PaintProg
 {
 	/// <summary>
-	/// Hlavní metoda programu
+	/// Main window of the application.
 	/// </summary>
 	public partial class MainForm : Form
 	{
 		/// <summary>
-		/// Objekt obsahující pomocné výpočty pro zjištění obdelníků pro vykreslování.
-		/// Jedna z instancí externí knihovny, kterou jsem vytvořil.
+		/// Contains supportive calculations for getting data about drawn rectangles and ellipses.
+		/// This is a practical example of a custom .dll library.
 		/// </summary>
 		RectGetter rectGetter = new RectGetter();
 		/// <summary>
-		/// Objekt obsahující metodu pro vyplnění oblasti danou barvou.
-		/// Druhá ukázka externí knihovny.
+		/// Contains a function for coloring a single-color area with another color. 
+		/// This is a practical example of a custom .dll library.
 		/// </summary>
 		Fill fl = new Fill();
 		
 		/// <summary>
-		/// Bitmapa reprezentující obrázek, na který se bude kreslit.
+		/// Represents a canvas on which user draws.
 		/// </summary>
 		public static Bitmap bmp;
 
 		/// <summary>
-		/// Kolekce sloužící pro uchování bodů, ze kterých se posléze vytvoří "křivka".
+		/// Used for storing points to create a hand drawn line.
 		/// </summary>
 		List<Point> pointsToDraw = new List<Point>();
 		
 		/// <summary>
-		/// Uchovává informaci zda-li uživatel provádí kreslící operaci či nikoliv.
+		/// Used for storing "editing state" of a program, i.e. if user draws on canvas or not.
 		/// </summary>
 		bool isEditing = false;
 		
 		/// <summary>
-		/// Uchovává informaci zda-li uživatel stiskl pravé tlačítko či nikoliv;
+		/// Used for checking which mouse button is pressed.
 		/// </summary>
 		bool rightPressed = false;
 		
 		/// <summary>
-		/// Bude-li obrazec vybarven či se nakreslí jen obrys.
+		/// Used for checking if an user wants to draw a filled shape or an outline of it.
 		/// </summary>
 		public static bool fillingShapes = false;
 		
 		/// <summary>
-		/// Proměnná pro uchování Xové souřadnice kurzoru na pictureboxu.
+		/// Stores an X-coordinate of a mouse.
 		/// </summary>
 		int mX = 0;
 		
 		/// <summary>
-		/// Proměnná pro uchování Yové souřadnice kurzoru na pictureboxu.
+		/// Stores an Y-coordinate of a mouse.
 		/// </summary>
 		int mY = 0;
 		
 		/// <summary>
-		/// Enumerát pro určení aktivní kreslící operace.
+		/// Used as a switch for selecting desired drawing operation.
 		/// </summary>
 		public enum ActiveTool {Pen, Fill, Rectangle, Ellipse, Spray};
 		
 		/// <summary>
-		/// Proměnná pro uložení vybrané kreslící operace.
+		/// Used to store a selected drawing tool.
 		/// </summary>
 		public static ActiveTool selectedTool = ActiveTool.Pen;
 		
 		/// <summary>
-		/// Tloušťka pera.
+		/// A width of a pen.
 		/// </summary>
 		public static float penWidth = 1;
 		
 		/// <summary>
-		/// Vybrané barvy(pro levé a pravé tlačítko myši).
+		/// Contains information about selected colors([0] - left; [1] - right);
 		/// </summary>
 		public static Color[] colors = {Color.Black, Color.White};
 		
 		/// <summary>
-		/// Pomocný bod pro kreslení obdélníků a elips.
-		/// Vykreslení pomocí kolekce pointsToDraw se mi nepovedlo implementovat
-		/// kvůli neschopnosti měnit souřadnice bodu v kolekci(zatím nevím proč).
+		/// Supportive point for drawing rectangles and ellipses.
 		/// </summary>
 		public Point helpPoint = new Point(0,0);
 		
 		public MainForm()
 		{
 			InitializeComponent();
-			
 			new Intro().ShowDialog();
 			
 			this.Text = "Plátno";
@@ -107,8 +104,8 @@ namespace PaintProg
 		}
 		
 		/// <summary>
-		/// Provede změnu velikosti plátna, resp. bitmapy, bez deformace(viz změna velikosti v MS Paint
-		/// pomocí táhnutí za pravý dolní roh.
+		/// Changes the size of an canvas(and bitmap as well). The size is dependent on the sizes
+		/// of the entire canvas form.
 		/// </summary>
 		void ResizeBitmap()
 		{
@@ -136,8 +133,8 @@ namespace PaintProg
 		{
 			rightPressed = true;
 			
-			//Timer zde slouží pro vykonávání samotných kreslících operací. Tímto způsobem
-			//lze "kreslit" i když se myš nehýbe, čehož je využito u nástoje "sprej".
+			//The timer is used to perform the actual drawing without any need of moving
+			//a mouse(specifically used with spraying tool.
 			timer1.Enabled = true;
 			
 			if(e.Button == MouseButtons.Left)
@@ -186,7 +183,8 @@ namespace PaintProg
 		{
 			e.Graphics.DrawImage(bmp, 0, 0);
 			
-			//Pomocná pro kreslení čar perem
+			//Changes the "rightPressed" bool to a number and uses it
+			//for selecting appropriate color.
 			Color tempCol = colors[(Convert.ToInt16(rightPressed))];
 			
 			if(pointsToDraw.Count > 1)
@@ -194,10 +192,8 @@ namespace PaintProg
 				e.Graphics.DrawLines(new Pen(tempCol, penWidth), pointsToDraw.ToArray());
 			}
 			
-			/*
-  			Jelikož mi metody FillRectangle a DrawREctangle neumožnily vykreslovat pomocí
-			negativních hodnot, musel jsem se uchýlit k vykreslení "obdélníkového polygonu"
-			 */
+			//Due to the way Draw/FillRectangle works with negative coordinates, drawing
+			//rectangles has to be solved with polygons instead.
 			if(pointsToDraw.Count == 1 && isEditing && selectedTool == ActiveTool.Rectangle)
 			{
 				var rect = rectGetter.GetRectangularPolygon(pointsToDraw[0], helpPoint);
@@ -207,7 +203,6 @@ namespace PaintProg
 				e.Graphics.DrawPolygon(new Pen(colors[0], penWidth), rect);
 			}
 			
-			//Elipsa tneto problém neměla
 			if(pointsToDraw.Count == 1 && isEditing && selectedTool == ActiveTool.Ellipse)
 			{
 				var rect = rectGetter.GetRectangle(pointsToDraw[0], helpPoint);

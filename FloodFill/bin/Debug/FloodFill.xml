@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FloodFill</name>
+    </assembly>
+    <members>
+        <member name="T:FloodFill.Fill">
+            <summary>
+            Allows to fill a selected area with 1 color. It is used to add "Fill bucket" functionality
+            to the drawing program(similiar to "Fill bucket" tool in MS Paint).
+            </summary>
+        </member>
+        <member name="M:FloodFill.Fill.FillRegion(System.Drawing.Bitmap,System.Windows.Forms.PictureBox,System.Drawing.Point,System.Drawing.Color,System.Drawing.Color)">
+            <summary>
+            Fils the selected area with a color.
+            The applied algorithm was taken from https://simpledevcode.wordpress.com/2015/12/29/flood-fill-algorithm-using-c-net/
+            where it is described in details.
+            </summary>
+            <param name="bmp">Bitmap where the area to fill is present..</param>
+            <param name="pb">Picturebox to be refreshed.</param>
+            <param name="pt">Initial point, i.e. where an user clicked.</param>
+            <param name="targetColor">Targeted color, i.e. the color that is to be replaced by other one.</param>
+            <param name="replacementColor">New color.</param>
+        </member>
+    </members>
+</doc>

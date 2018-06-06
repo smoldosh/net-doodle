@@ -3,3 +3,4 @@ C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\FloodFill\bin\Debug\Fl
 C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\FloodFill\obj\Debug\FloodFill.csprojResolveAssemblyReference.cache
 C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\FloodFill\obj\Debug\FloodFill.dll
 C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\FloodFill\obj\Debug\FloodFill.pdb
+C:\Users\Jiří\Documents\SharpDevelop Projects\PaintProg\FloodFill\bin\Debug\FloodFill.xml

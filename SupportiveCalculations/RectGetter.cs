@@ -12,16 +12,17 @@ using System.Drawing;
 namespace RectangleGetter
 {
 	/// <summary>
-	/// Třída pro zisk obdélníků.
+	/// Contains functions to return polygons and rectangles used in drawing
+	/// features of application.
 	/// </summary>
 	public class RectGetter
 	{
 		/// <summary>
-		/// Ze získaných bodů vytvoří obdélník pro vykreslení.
+		/// Creates a rectangle from 2 points.
 		/// </summary>
-		/// <param name="p1">1. krajní bod.</param>
-		/// <param name="p2">2. krajní bod.</param>
-		/// <returns>Vrátí obdélník</returns>
+		/// <param name="p1">1. point.</param>
+		/// <param name="p2">2. point.</param>
+		/// <returns>Rectangle</returns>
 		public Rectangle GetRectangle(Point p1, Point p2)
 		{
 			return new Rectangle(p1.X, p1.Y, p2.X-p1.X, p2.Y-p1.Y);
@@ -30,9 +31,9 @@ namespace RectangleGetter
 		/// <summary>
 		/// Ze získaných bodů vytvoří obdélníkový polygon pro vykreslení.
 		/// </summary>
-		/// <param name="p1">1. krajní bod.</param>
-		/// <param name="p2">2. krajní bod.</param>
-		/// <returns>Vrátí polygon tvořící obdélník</returns>
+		/// <param name="p1">1. point.</param>
+		/// <param name="p2">2. point.</param>
+		/// <returns>Polygon that represents a rectangle.</returns>
 		public Point[] GetRectangularPolygon(Point p1, Point p2)
 		{
 			Point[] rect = new Point[4];
