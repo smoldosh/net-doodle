@@ -1,7 +1,7 @@
 # net-doodle
 Repozitář pro moji seminární práci.
 
-V1.01
+V1.0.1
 - komentáře v anglickém jazyce
 - grafika z cizích zdrojů vyměněna za vlastní
 
