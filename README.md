@@ -1,6 +1,9 @@
 # net-doodle
 Repozitář pro moji seminární práci.
 
+V1.0.11
+- problém s ikonami vyřešen(už to jde spustit)
+
 V1.0.1
 - komentáře v anglickém jazyce
 - grafika z cizích zdrojů vyměněna za vlastní
